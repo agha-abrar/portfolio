@@ -12,7 +12,7 @@ const content = {
   email: 'hello@example.com',
   cvPath: '/cv/Agha-Abrar-CV.pdf', // replace this file in /public/cv
   socials: [
-    { label: 'GitHub', url: 'https://github.com/yourusername' },
+    { label: 'GitHub', url: 'https://github.com/agha-abrar' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
     { label: 'Twitter', url: 'https://twitter.com/yourusername' },
   ],
@@ -51,37 +51,88 @@ const content = {
 
   projects: [
     {
-      title: 'Project One',
-      description:
-        'A short, concrete description of the problem this project solved and the part you owned.',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      link: '#',
-      repo: '#',
+      "title": "MCP GitHub Repo Assistant",
+      "description": "Analyzes repository documentation, issues, and pull requests to produce AI-assisted triage, health reports, and a seven-day sprint plan.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "GitHub API"
+      ],
+      "repo": "https://github.com/agha-abrar/mcp-github-repo-assistant"
     },
     {
-      title: 'Project Two',
-      description:
-        'A short, concrete description of the problem this project solved and the part you owned.',
-      tags: ['Next.js', 'Tailwind', 'Stripe'],
-      link: '#',
-      repo: '#',
+      "title": "Transparent Auction House",
+      "description": "An auction platform with buyer and administrator interfaces, bidding workflows, and a shill-bidding detection module.",
+      "tags": [
+        "JavaScript",
+        "Flask",
+        "Python"
+      ],
+      "repo": "https://github.com/agha-abrar/Transparent-Auction-House-FYP"
     },
     {
-      title: 'Project Three',
-      description:
-        'A short, concrete description of the problem this project solved and the part you owned.',
-      tags: ['TypeScript', 'Framer Motion'],
-      link: '#',
-      repo: '#',
+      "title": "AI Clinical Decision Support",
+      "description": "An educational prototype combining a desktop interface, patient records, medication-safety rules, and an AI gateway. Clinical workflows are still in development; not clinically validated.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "NestJS",
+        "FastAPI"
+      ],
+      "repo": "https://github.com/agha-abrar/AI-Powered-Clinical-Decision-Support-System"
     },
     {
-      title: 'Project Four',
-      description:
-        'A short, concrete description of the problem this project solved and the part you owned.',
-      tags: ['React Native', 'Firebase'],
-      link: '#',
-      repo: '#',
+      "title": "Resume Ranking",
+      "description": "Compares uploaded PDF resumes with a job description using TF-IDF vectors and cosine similarity, then displays ranked results.",
+      "tags": [
+        "Python",
+        "Flask",
+        "scikit-learn",
+        "NLP"
+      ],
+      "repo": "https://github.com/agha-abrar/Resume-Ranking"
     },
+    {
+      "title": "Revenue Dashboard",
+      "description": "Tracks ride revenue and profit with a fare calculator, saved ride history, and analytics views backed by CSV data.",
+      "tags": [
+        "Python",
+        "Flask",
+        "Pandas"
+      ],
+      "repo": "https://github.com/agha-abrar/revenue_dashboard"
+    },
+    {
+      "title": "MERN E-commerce",
+      "description": "A full-stack storefront with product browsing, shopping carts, wishlists, order management, and administrator screens.",
+      "tags": [
+        "React",
+        "Node.js",
+        "JavaScript"
+      ],
+      "repo": "https://github.com/agha-abrar/mern-ecommerce-main"
+    },
+    {
+      "title": "Digital Image Filters",
+      "description": "A web application for image processing, including gamma correction, histogram adjustments, edge detection, and frequency-domain filters.",
+      "tags": [
+        "Python",
+        "Flask",
+        "Image Processing"
+      ],
+      "repo": "https://github.com/agha-abrar/Digital_Image_Filters_and_Transformations"
+    },
+    {
+      "title": "Deep Learning Text Classification",
+      "description": "Experiments comparing text encodings and embeddings for deep learning classification, with preprocessing and stratified training and evaluation splits.",
+      "tags": [
+        "Deep Learning",
+        "NLP",
+        "Jupyter Notebook"
+      ],
+      "repo": "https://github.com/agha-abrar/TextClassification_Experiments-Using-Deep-Learning"
+    }
   ],
 
   experience: [

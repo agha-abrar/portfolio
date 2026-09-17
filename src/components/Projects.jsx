@@ -55,8 +55,10 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 <a
-                  href={project.link}
-                  aria-label={`Live demo of ${project.title}`}
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
                   className="text-muted hover:text-cyan transition-colors duration-200 text-lg"
                 >
                   ↗
@@ -77,6 +79,16 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} source on GitHub`}
+                className="relative inline-flex items-center gap-2 mt-6 text-sm font-semibold text-cyan hover:text-star transition-colors"
+              >
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
             </motion.article>
           ))}
         </div>
