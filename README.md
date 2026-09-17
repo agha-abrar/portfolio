@@ -20,12 +20,20 @@ Guest chats are saved in the browser for now. Sign-up / sign-in for per-user his
 npm run build
 ```
 
-This outputs a `dist/` folder — deploy that anywhere static (Vercel, Netlify, GitHub Pages).
+This outputs the frontend in `dist/`. Chat also requires the server-side API.
 
-To deploy on Vercel:
+Vercel deploys the frontend and the `api/` functions together. `vercel.json`
+also routes direct visits to `/connect` to the React app.
+
+Set `OPENROUTER_API_KEY` in the Vercel project's environment variables for
+Production and Preview. Keep it server-side, without a `VITE_` prefix.
+Optionally set `OPENROUTER_SITE_URL` to the public site URL and
+`OPENROUTER_SITE_NAME` to `AghaConnect`. Local `.env` files are excluded from
+Git and Vercel uploads.
+
+To deploy on Vercel after signing in and linking the project:
 ```bash
-npm i -g vercel
-vercel
+vercel --prod
 ```
 
 ## Put in your own info
