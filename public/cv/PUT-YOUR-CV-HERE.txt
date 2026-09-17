@@ -1,8 +1,0 @@
-Replace this folder's content with your real CV file.
-
-1. Name your PDF file exactly: Agha-Abrar-CV.pdf
-   (or change the `cvPath` value in src/data/content.js to match your filename)
-2. Drop it into this /public/cv folder.
-3. Delete this text file.
-
-The "Download CV" buttons in the Nav and Hero already point to /cv/Agha-Abrar-CV.pdf

@@ -10,7 +10,7 @@ const content = {
     'I build fast, considered interfaces — the kind that feel obvious in hindsight.',
   location: 'Sindh, Pakistan',
   email: 'hello@example.com',
-  cvPath: '/cv/Agha-Abrar-CV.pdf', // replace this file in /public/cv
+  cvPath: '/cv/Agha-Abrar-CV.pdf',
   socials: [
     { label: 'GitHub', url: 'https://github.com/agha-abrar' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
