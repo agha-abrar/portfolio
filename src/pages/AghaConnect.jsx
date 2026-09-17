@@ -56,7 +56,7 @@ export default function AghaConnect() {
   }, [active?.messages, busy])
 
   const handleNew = () => {
-    const convo = createConversation(active?.model || DEFAULT_MODEL_ID)
+    const convo = createConversation()
     persist((prev) => ({
       ...prev,
       conversations: [convo, ...prev.conversations],
@@ -78,26 +78,6 @@ export default function AghaConnect() {
       const conversations = prev.conversations.filter((c) => c.id !== id)
       const activeId = prev.activeId === id ? conversations[0]?.id || null : prev.activeId
       return { ...prev, conversations, activeId }
-    })
-  }
-
-  const handleModelChange = (model) => {
-    persist((prev) => {
-      const current = prev.conversations.find((c) => c.id === prev.activeId)
-      if (!current) {
-        const convo = createConversation(model)
-        return {
-          ...prev,
-          conversations: [convo, ...prev.conversations],
-          activeId: convo.id,
-        }
-      }
-      return {
-        ...prev,
-        conversations: prev.conversations.map((c) =>
-          c.id === current.id ? { ...c, model, updatedAt: Date.now() } : c
-        ),
-      }
     })
   }
 
@@ -124,8 +104,8 @@ export default function AghaConnect() {
 
     const prev = storeRef.current
     const current = prev.conversations.find((c) => c.id === prev.activeId)
-    const model = current?.model || DEFAULT_MODEL_ID
-    const base = current || createConversation(model)
+    const model = DEFAULT_MODEL_ID
+    const base = current || createConversation()
 
     const userMsg = {
       id: `u_${Date.now()}`,
@@ -210,7 +190,7 @@ export default function AghaConnect() {
             <Link to="/" className="chat-brand">
               Agha<span className="text-cyan">Connect</span>
             </Link>
-            <span className="chat-top-pill hidden sm:inline">Multi-model · OpenRouter</span>
+            <span className="chat-top-pill hidden sm:inline">GPT-4o Mini · OpenRouter</span>
           </div>
           <div className="chat-topbar-right">
             <span
@@ -244,11 +224,7 @@ export default function AghaConnect() {
 
           <main className="chat-main">
             <div className="chat-toolbar">
-              <ModelPicker
-                value={active?.model || DEFAULT_MODEL_ID}
-                onChange={handleModelChange}
-                disabled={busy}
-              />
+              <ModelPicker />
             </div>
 
             <div className="chat-messages">
@@ -258,8 +234,8 @@ export default function AghaConnect() {
                     Agha<span className="text-cyan">Connect</span>
                   </h1>
                   <p className="chat-empty-copy">
-                    ChatGPT-style conversations powered by OpenRouter. Pick any model,
-                    ship ideas faster — built for demos today, accounts tomorrow.
+                    Chat with GPT-4o Mini, powered by OpenRouter.
+                    Ask questions, explore ideas, and get help with your work.
                   </p>
                   <div className="chat-empty-hints">
                     {[

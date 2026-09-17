@@ -1,3 +1,5 @@
+import { DEFAULT_MODEL_ID } from './models.js'
+
 const STORAGE_KEY = 'agha-connect-v1'
 
 /**
@@ -21,7 +23,9 @@ export function loadStore() {
     return {
       ...emptyStore(),
       ...parsed,
-      conversations: Array.isArray(parsed.conversations) ? parsed.conversations : [],
+      conversations: Array.isArray(parsed.conversations)
+        ? parsed.conversations.map((conversation) => ({ ...conversation, model: DEFAULT_MODEL_ID }))
+        : [],
     }
   } catch {
     return emptyStore()
@@ -32,7 +36,7 @@ export function saveStore(store) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(store))
 }
 
-export function createConversation(model) {
+export function createConversation() {
   const id =
     typeof crypto !== 'undefined' && crypto.randomUUID
       ? crypto.randomUUID()
@@ -41,7 +45,7 @@ export function createConversation(model) {
   return {
     id,
     title: 'New chat',
-    model,
+    model: DEFAULT_MODEL_ID,
     messages: [],
     createdAt: Date.now(),
     updatedAt: Date.now(),

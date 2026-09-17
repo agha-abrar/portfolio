@@ -1,11 +1,11 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
+import { DEFAULT_MODEL_ID, DEFAULT_MODELS } from '../src/chat/models.js'
 
 const app = express()
 const PORT = process.env.PORT || 8787
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
-const MODELS_URL = 'https://openrouter.ai/api/v1/models'
 
 app.use(cors({ origin: true }))
 app.use(express.json({ limit: '2mb' }))
@@ -31,22 +31,8 @@ app.get('/api/health', (_req, res) => {
   })
 })
 
-app.get('/api/models', async (_req, res) => {
-  const key = requireKey(_req, res)
-  if (!key) return
-
-  try {
-    const response = await fetch(MODELS_URL, {
-      headers: { Authorization: `Bearer ${key}` },
-    })
-    const data = await response.json()
-    if (!response.ok) {
-      return res.status(response.status).json(data)
-    }
-    res.json(data)
-  } catch (err) {
-    res.status(502).json({ error: err.message || 'Failed to fetch models' })
-  }
+app.get('/api/models', (_req, res) => {
+  res.json({ data: DEFAULT_MODELS })
 })
 
 app.post('/api/chat', async (req, res) => {
@@ -62,7 +48,7 @@ app.post('/api/chat', async (req, res) => {
   }
 
   const payload = {
-    model,
+    model: DEFAULT_MODEL_ID,
     messages,
     stream,
   }
