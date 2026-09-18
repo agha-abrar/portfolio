@@ -18,8 +18,8 @@ const content = {
 
   about: {
     paragraphs: [
-      "I'm a developer who cares as much about how software feels as how it works. My background spans building interfaces end to end — from component architecture to the small motion details that make a product feel alive.",
-      "Outside of client work, I spend time exploring type systems, generative design, and reading about the history of graphic design — most of which quietly ends up in my UI decisions.",
+      "I'm a Full Stack ML Engineer focused on turning AI and machine learning ideas into useful applications. My work brings together data processing, model integration, backend APIs, and clear interfaces — from text classification and resume ranking to AI assistants and automation tools.",
+      "I explore natural language processing, retrieval-augmented generation, and AI workflows with tools such as Hugging Face, LangChain, and LangGraph. I care about how these systems behave in practice: the quality of their answers, how they handle data, and whether they make a task easier for the people using them.",
     ],
     facts: [
       { label: 'Based in', value: 'Sindh, Pakistan' },
