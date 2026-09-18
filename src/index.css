@@ -1731,10 +1731,10 @@ button {
 .portfolio-chat {
   position: fixed;
   right: 1.25rem;
-  bottom: 8.75rem;
+  bottom: 4.5rem;
   z-index: 45;
   width: min(390px, calc(100vw - 2rem));
-  max-height: min(620px, calc(100dvh - 10rem));
+  max-height: min(620px, calc(100dvh - 5.75rem));
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1775,7 +1775,7 @@ button {
 .portfolio-chat-error { padding: 0.6rem 1rem; font-size: 0.8rem; color: #fda4af; }
 .portfolio-chat-header, .portfolio-chat-form, .portfolio-chat-footer, .portfolio-chat-suggestions { flex-shrink: 0; }
 @media (max-width: 480px) {
-  .portfolio-chat { right: 0.75rem; bottom: 8.75rem; width: calc(100vw - 1.5rem); }
+  .portfolio-chat { right: 0.75rem; bottom: 4.5rem; width: calc(100vw - 1.5rem); }
 }
 
 .action-pill:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
