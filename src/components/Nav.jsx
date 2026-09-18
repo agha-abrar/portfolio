@@ -87,7 +87,7 @@ export default function Nav() {
               to="/connect"
               className="ml-2 rounded-full border border-cyan/35 px-4 py-2 text-sm font-medium text-cyan hover:bg-cyan hover:text-void transition-colors duration-300"
             >
-              AghaConnect
+              Omnixo AI
             </Link>
           </li>
         </ul>
@@ -151,7 +151,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className="block w-full text-left py-3 text-base text-cyan"
             >
-              AghaConnect
+              Omnixo AI
             </Link>
           </li>
           <li>

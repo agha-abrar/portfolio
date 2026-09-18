@@ -12,7 +12,7 @@ export default function MessageBubble({ role, content, streaming }) {
       className={`msg-row ${isUser ? 'msg-row-user' : 'msg-row-assistant'}`}
     >
       <div className={`msg-avatar ${isUser ? 'msg-avatar-user' : 'msg-avatar-ai'}`}>
-        {isUser ? 'You' : 'AC'}
+        {isUser ? 'You' : 'AI'}
       </div>
       <div className={`msg-bubble ${isUser ? 'msg-bubble-user' : 'msg-bubble-ai'}`}>
         <p className="msg-text">

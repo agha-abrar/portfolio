@@ -1,5 +1,6 @@
 import { DEFAULT_MODEL_ID } from './models.js'
 
+// Keep the original key so existing conversations survive the rename.
 const STORAGE_KEY = 'agha-connect-v1'
 
 /**

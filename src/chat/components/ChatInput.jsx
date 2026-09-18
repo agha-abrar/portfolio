@@ -32,7 +32,7 @@ export default function ChatInput({ value, onChange, onSubmit, disabled, placeho
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}
         disabled={disabled}
-        placeholder={placeholder || 'Message AghaConnect…'}
+        placeholder={placeholder || 'Message Omnixo AI…'}
         className="chat-input"
       />
       <button

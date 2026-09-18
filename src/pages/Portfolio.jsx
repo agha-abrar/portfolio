@@ -36,9 +36,9 @@ export default function Portfolio() {
         </main>
         <Footer />
 
-        <Link to="/connect" className="connect-fab" aria-label="Open AghaConnect chat">
+        <Link to="/connect" className="connect-fab" aria-label="Open Omnixo AI chat">
           <span className="connect-fab-dot" />
-          AghaConnect
+          Omnixo AI
         </Link>
       </div>
     </div>

@@ -4,7 +4,7 @@ A single-page portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 Sections: Home, About, Skills, Projects, Experience, Contact — with smooth-scroll
 navigation, scroll-spy highlighting, and a Download CV button.
 
-## AghaConnect (chat)
+## Omnixo AI (chat)
 
 Open **http://localhost:5173/connect** (or use the nav / floating button).
 
@@ -28,7 +28,7 @@ also routes direct visits to `/connect` to the React app.
 Set `OPENROUTER_API_KEY` in the Vercel project's environment variables for
 Production and Preview. Keep it server-side, without a `VITE_` prefix.
 Optionally set `OPENROUTER_SITE_URL` to the public site URL and
-`OPENROUTER_SITE_NAME` to `AghaConnect`. Local `.env` files are excluded from
+`OPENROUTER_SITE_NAME` to `Omnixo AI`. Local `.env` files are excluded from
 Git and Vercel uploads.
 
 To deploy on Vercel after signing in and linking the project:

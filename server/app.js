@@ -25,7 +25,7 @@ function requireKey(req, res) {
 app.get('/api/health', (_req, res) => {
   res.json({
     ok: true,
-    service: 'AghaConnect',
+    service: 'Omnixo AI',
     hasKey: Boolean(process.env.OPENROUTER_API_KEY?.trim()),
   })
 })
@@ -59,7 +59,7 @@ app.post('/api/chat', async (req, res) => {
         Authorization: `Bearer ${key}`,
         'Content-Type': 'application/json',
         'HTTP-Referer': process.env.OPENROUTER_SITE_URL || 'http://localhost:5173',
-        'X-Title': process.env.OPENROUTER_SITE_NAME || 'AghaConnect',
+        'X-Title': process.env.OPENROUTER_SITE_NAME || 'Omnixo AI',
       },
       body: JSON.stringify(payload),
     })

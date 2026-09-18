@@ -1,6 +1,6 @@
 export async function checkApiHealth() {
   const res = await fetch('/api/health')
-  if (!res.ok) throw new Error('AghaConnect API is offline')
+  if (!res.ok) throw new Error('Omnixo AI API is offline')
   return res.json()
 }
 

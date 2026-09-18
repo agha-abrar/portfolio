@@ -16,7 +16,7 @@ import {
 import { streamChat, checkApiHealth } from '../chat/api'
 import GalaxyBackground from '../components/GalaxyBackground'
 
-export default function AghaConnect() {
+export default function OmnixoAI() {
   const [store, setStore] = useState(() => loadStore())
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
@@ -188,7 +188,7 @@ export default function AghaConnect() {
               ☰
             </button>
             <Link to="/" className="chat-brand">
-              Agha<span className="text-cyan">Connect</span>
+              Omnixo <span className="text-cyan">AI</span>
             </Link>
             <span className="chat-top-pill hidden sm:inline">GPT-4o Mini · OpenRouter</span>
           </div>
@@ -231,7 +231,7 @@ export default function AghaConnect() {
               {!active || active.messages.length === 0 ? (
                 <div className="chat-empty">
                   <h1 className="chat-empty-title">
-                    Agha<span className="text-cyan">Connect</span>
+                    Omnixo <span className="text-cyan">AI</span>
                   </h1>
                   <p className="chat-empty-copy">
                     Chat with GPT-4o Mini, powered by OpenRouter.
