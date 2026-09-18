@@ -7,7 +7,7 @@ const content = {
   name: 'Agha Abrar',
   role: 'Full Stack ML Engineer',
   tagline:
-    'I build fast, considered interfaces — the kind that feel obvious in hindsight.',
+    'From raw data to intelligent action — I build AI agents, RAG systems, and full-stack applications that turn complex ideas into useful products.',
   location: 'Sindh, Pakistan',
   email: 'abrarkhan9226@gmail.com',
   cvPath: '/cv/Agha-Abrar-CV.pdf',
