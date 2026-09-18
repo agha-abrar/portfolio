@@ -8,6 +8,7 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
+  { id: 'certifications', label: 'Certifications' },
   { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ]
@@ -62,7 +63,7 @@ export default function Nav() {
           <span className="text-cyan">.</span>
         </button>
 
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden xl:flex items-center gap-1">
           {sections.map((s) => (
             <li key={s.id} className="relative">
               <button
@@ -84,14 +85,14 @@ export default function Nav() {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           <Link to="/connect" className="action-pill">
             Omnixo AI
           </Link>
         </div>
 
         <button
-          className="md:hidden text-mist flex flex-col gap-1.5 p-2"
+          className="xl:hidden text-mist flex flex-col gap-1.5 p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -118,7 +119,7 @@ export default function Nav() {
         initial={false}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-void/95 border-b border-white/5 backdrop-blur-xl"
+        className="xl:hidden overflow-hidden bg-void/95 border-b border-white/5 backdrop-blur-xl max-h-[calc(100dvh-5rem)] overflow-y-auto"
       >
         <ul className="flex flex-col px-6 pb-4">
           {sections.map((s) => (

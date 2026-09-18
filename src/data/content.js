@@ -230,6 +230,45 @@ const content = {
     }
   ],
 
+  certifications: [
+    {
+      title: 'Model Context Protocol: Advanced topics',
+      issuer: 'Claude Academy',
+      date: 'September 18, 2026',
+      file: 'Screenshot 2026-09-18 at 11.42.10 PM.png',
+    },
+    {
+      title: 'Claude with Amazon Bedrock',
+      issuer: 'Claude Academy',
+      date: 'September 16, 2026',
+      file: 'Screenshot 2026-09-18 at 11.42.44 PM.png',
+    },
+    {
+      title: 'Introduction to Model Context Protocol',
+      issuer: 'Claude Academy',
+      date: 'September 15, 2026',
+      file: 'Screenshot 2026-09-15 at 5.02.10 PM.png',
+    },
+    {
+      title: 'Python And Flask Framework Complete Course',
+      issuer: 'Udemy',
+      date: 'February 19, 2025',
+      file: 'UC-48d198bf-5672-4e7b-a505-5fa0215d7c99.jpg',
+    },
+    {
+      title: 'Flutter Masterclass (Dart, APIs, Firebase & More) - 2024',
+      issuer: 'Udemy',
+      date: 'November 11, 2024',
+      file: 'UC-2c77ec67-4f65-4ef4-a679-a0ec754bd59f.jpg',
+    },
+    {
+      title: 'NodeJS Masterclass (Express, MongoDB, OpenAI) - 2024 Ready!',
+      issuer: 'Udemy',
+      date: 'November 9, 2024',
+      file: 'UC-551e48db-c826-4a15-8141-897c901aa511.jpg',
+    },
+  ],
+
   experience: [
     {
       role: 'Freelance Full Stack & AI Developer',

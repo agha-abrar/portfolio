@@ -8,6 +8,7 @@ export function portfolioMessages(messages) {
     profileFacts: content.about.facts,
     skills: content.skills,
     projects: content.projects,
+    certifications: content.certifications.map(({ title, issuer, date }) => ({ title, issuer, date })),
     resume: content.cvPath,
     socials: content.socials.filter((social) => !social.url.includes('yourusername')),
     email: content.email.endsWith('@example.com') ? null : content.email,
