@@ -45,7 +45,7 @@ export default function GalaxyBackground() {
     <>
     <button
       type="button"
-      className="galaxy-motion-toggle"
+      className="action-pill galaxy-motion-toggle"
       aria-pressed={motionEnabled}
       onClick={() => setMotionEnabled((enabled) => !enabled)}
     >

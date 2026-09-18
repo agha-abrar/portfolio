@@ -82,24 +82,12 @@ export default function Nav() {
               </button>
             </li>
           ))}
-          <li>
-            <Link
-              to="/connect"
-              className="ml-2 rounded-full border border-cyan/35 px-4 py-2 text-sm font-medium text-cyan hover:bg-cyan hover:text-void transition-colors duration-300"
-            >
-              Omnixo AI
-            </Link>
-          </li>
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href={content.cvPath}
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-mist hover:border-cyan/50 hover:text-cyan transition-colors duration-300"
-          >
-            Download CV
-          </a>
+          <Link to="/connect" className="action-pill">
+            Omnixo AI
+          </Link>
         </div>
 
         <button
@@ -149,20 +137,12 @@ export default function Nav() {
             <Link
               to="/connect"
               onClick={() => setOpen(false)}
-              className="block w-full text-left py-3 text-base text-cyan"
+              className="action-pill mt-2"
             >
               Omnixo AI
             </Link>
           </li>
-          <li>
-            <a
-              href={content.cvPath}
-              download
-              className="inline-block mt-2 mb-2 text-sm font-medium text-cyan"
-            >
-              Download CV →
-            </a>
-          </li>
+
         </ul>
       </motion.div>
     </header>

@@ -112,9 +112,9 @@ export default function Hero() {
           <a
             href={content.cvPath}
             download
-            className="rounded-full border border-white/20 px-7 py-3.5 font-medium text-mist hover:border-cyan/60 hover:text-cyan transition-colors duration-200"
+            className="action-pill"
           >
-            Download CV
+            Download Resume
           </a>
         </motion.div>
 

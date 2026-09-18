@@ -101,8 +101,8 @@ export default function PortfolioChat() {
                 <span>{message.role === 'user' ? 'You' : 'Portfolio assistant'}</span>
                 <p>{message.content || 'Thinking…'}</p>
                 {message.downloadCV && (
-                  <a className="portfolio-chat-download" href={content.cvPath} download="Agha-Abrar-CV.pdf">
-                    Download CV ↓
+                  <a className="action-pill portfolio-chat-download" href={content.cvPath} download="Agha-Abrar-CV.pdf">
+                    Download Resume ↓
                   </a>
                 )}
               </div>
@@ -122,11 +122,11 @@ export default function PortfolioChat() {
           </form>
           <footer className="portfolio-chat-footer">
             <span>Answers based on this portfolio</span>
-            <a href={content.cvPath} download>Download CV ↓</a>
+            <a className="action-pill" href={content.cvPath} download>Download Resume ↓</a>
           </footer>
         </section>
       )}
-      <button ref={launcherRef} type="button" className="connect-fab" aria-expanded={open} aria-controls="portfolio-chat"
+      <button ref={launcherRef} type="button" className="action-pill connect-fab" aria-expanded={open} aria-controls="portfolio-chat"
         onClick={() => open ? close() : setOpen(true)}>
         <span aria-hidden="true">✦</span> {open ? 'Close chat' : 'Ask about me'}
       </button>
