@@ -175,7 +175,7 @@ export default function OmnixoAI() {
 
   return (
     <div className="relative min-h-screen font-body text-mist">
-      <GalaxyBackground />
+      <GalaxyBackground showMotionToggle={false} />
       <div className="relative z-10 flex h-screen flex-col">
         <header className="chat-topbar">
           <div className="chat-topbar-left">
