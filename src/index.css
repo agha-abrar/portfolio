@@ -1759,6 +1759,18 @@ button {
 .portfolio-chat-message-user { background: rgba(94, 234, 212, 0.1); margin-left: 1.25rem; }
 .portfolio-chat-message span { display: block; margin-bottom: 0.35rem; color: var(--cyan); font-size: 0.65rem; font-weight: 600; }
 .portfolio-chat-message p { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.85rem; line-height: 1.6; }
+.portfolio-chat-download {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  background: var(--cyan);
+  color: var(--void);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.portfolio-chat-download:hover { background: var(--star); }
 .portfolio-chat-suggestions { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0 1rem 1rem; }
 .portfolio-chat-suggestions button { border: 1px solid rgba(94, 234, 212, 0.25); border-radius: 0.6rem; padding: 0.45rem 0.65rem; font-size: 0.75rem; color: var(--cyan); }
 .portfolio-chat-form { display: flex; gap: 0.5rem; padding: 0.85rem 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }

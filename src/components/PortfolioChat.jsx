@@ -42,9 +42,23 @@ export default function PortfolioChat() {
   async function send(text = input) {
     const question = text.trim()
     if (!question || controllerRef.current) return
+    const history = [...messages, { role: 'user', content: question }]
+    const normalized = question.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const mentionsResume = /\b(cv|resume|curriculum vitae)\b/i.test(normalized)
+    const wantsDownload = /\b(download|get|send|share|view|open|link|copy|give|access|find|where)\b/i.test(normalized)
+      || /^(cv|resume|curriculum vitae)[?! .]*$/i.test(normalized)
+    if (mentionsResume && wantsDownload) {
+      setMessages([...history, {
+        role: 'assistant',
+        content: 'You can download Agha Abrar’s CV using the button below.',
+        downloadCV: true,
+      }])
+      setInput('')
+      setError('')
+      return
+    }
     const controller = new AbortController()
     controllerRef.current = controller
-    const history = [...messages, { role: 'user', content: question }]
     setMessages([...history, { role: 'assistant', content: '' }])
     setInput('')
     setError('')
@@ -86,6 +100,11 @@ export default function PortfolioChat() {
               <div key={index} className={`portfolio-chat-message portfolio-chat-message-${message.role}`}>
                 <span>{message.role === 'user' ? 'You' : 'Portfolio assistant'}</span>
                 <p>{message.content || 'Thinking…'}</p>
+                {message.downloadCV && (
+                  <a className="portfolio-chat-download" href={content.cvPath} download="Agha-Abrar-CV.pdf">
+                    Download CV ↓
+                  </a>
+                )}
               </div>
             ))}
           </div>
