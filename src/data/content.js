@@ -232,25 +232,11 @@ const content = {
 
   experience: [
     {
-      role: 'Frontend Developer',
-      company: 'Company Name',
-      period: '2024 — Present',
-      description:
-        'What you owned, what shipped, and the measurable difference it made.',
-    },
-    {
-      role: 'UI Developer Intern',
-      company: 'Company Name',
-      period: '2023 — 2024',
-      description:
-        'What you owned, what shipped, and the measurable difference it made.',
-    },
-    {
-      role: 'Freelance Web Developer',
+      role: 'Freelance Full Stack & AI Developer',
       company: 'Self-employed',
-      period: '2022 — 2023',
+      period: '2020 — 2026',
       description:
-        'What you owned, what shipped, and the measurable difference it made.',
+        'Delivered 30+ freelance projects, combining full-stack development, AI integration, and automation to turn client requirements into practical applications.',
     },
   ],
 }
