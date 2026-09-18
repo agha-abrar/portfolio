@@ -74,7 +74,7 @@ export default function Hero() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="font-display font-bold leading-[0.92] text-[clamp(3.2rem,11vw,8rem)] text-star name-glow flex flex-wrap tracking-tight"
+          className="font-display font-bold leading-[0.92] text-[clamp(3.2rem,11vw,8rem)] text-star flex flex-wrap tracking-tight"
           aria-label={content.name}
         >
           {nameLetters.map((char, i) => (

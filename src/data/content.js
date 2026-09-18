@@ -13,7 +13,7 @@ const content = {
   cvPath: '/cv/Agha-Abrar-CV.pdf',
   socials: [
     { label: 'GitHub', url: 'https://github.com/agha-abrar' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/agha-abrar/' },
   ],
 
   about: {
