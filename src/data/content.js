@@ -9,12 +9,11 @@ const content = {
   tagline:
     'I build fast, considered interfaces — the kind that feel obvious in hindsight.',
   location: 'Sindh, Pakistan',
-  email: 'hello@example.com',
+  email: 'abrarkhan9226@gmail.com',
   cvPath: '/cv/Agha-Abrar-CV.pdf',
   socials: [
     { label: 'GitHub', url: 'https://github.com/agha-abrar' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-    { label: 'Twitter', url: 'https://twitter.com/yourusername' },
   ],
 
   about: {
@@ -24,9 +23,9 @@ const content = {
     ],
     facts: [
       { label: 'Based in', value: 'Sindh, Pakistan' },
-      { label: 'Focus', value: 'React, Design Systems, Motion' },
+      { label: 'Focus', value: 'Machine Learning, AI & Automation' },
       { label: 'Currently', value: 'Open to new roles' },
-      { label: 'Experience', value: '3+ years' },
+      { label: 'Experience', value: '5+ years' },
     ],
   },
 

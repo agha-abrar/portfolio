@@ -5,6 +5,7 @@ export function portfolioMessages(messages) {
     name: content.name,
     role: content.role,
     location: content.location,
+    profileFacts: content.about.facts,
     skills: content.skills,
     projects: content.projects,
     resume: content.cvPath,
