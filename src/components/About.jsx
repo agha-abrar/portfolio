@@ -4,7 +4,7 @@ import { fadeUp, viewportOnce } from '../utils/motion'
 
 export default function About() {
   return (
-    <section id="about" className="relative py-28 md:py-36">
+    <section id="about" className="relative py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10 grid md:grid-cols-[0.9fr,1.1fr] gap-14 md:gap-20">
         <motion.div
           variants={fadeUp}

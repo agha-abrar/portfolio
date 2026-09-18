@@ -4,14 +4,14 @@ import { fadeUp, scaleIn, viewportOnce } from '../utils/motion'
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-28 md:py-36">
+    <section id="skills" className="relative py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="max-w-xl mb-16"
+          className="max-w-xl mb-8"
         >
           <span className="section-label">Skills</span>
           <h2 className="font-display font-bold text-3xl md:text-5xl mt-4 leading-tight text-star text-balance">
@@ -19,7 +19,7 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-x-12 gap-y-14">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
           {content.skills.map((group, gi) => (
             <motion.div
               key={group.group}

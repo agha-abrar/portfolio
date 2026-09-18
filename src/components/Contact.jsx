@@ -4,7 +4,7 @@ import { fadeUp, viewportOnce, easeSmooth } from '../utils/motion'
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-28 md:py-40 overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-16 overflow-hidden">
       <div className="contact-glow" aria-hidden />
 
       <div className="relative max-w-3xl mx-auto px-6 md:px-10 text-center">

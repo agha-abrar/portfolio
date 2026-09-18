@@ -10,9 +10,9 @@ const images = import.meta.glob('../../certifications/*.{png,jpg,jpeg,webp}', {
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative py-28 md:py-36">
+    <section id="certifications" className="relative py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} className="max-w-xl mb-12">
+        <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} className="max-w-xl mb-8">
           <span className="section-label">Certifications</span>
           <h2 className="font-display font-bold text-3xl md:text-5xl mt-4 text-star">Learning behind the work</h2>
           <p className="mt-5 text-mist leading-relaxed">Course certificates in AI tooling, backend development, and mobile applications.</p>

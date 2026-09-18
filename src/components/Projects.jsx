@@ -13,14 +13,14 @@ const cardVariant = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-28 md:py-36">
+    <section id="projects" className="relative py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="max-w-xl mb-16"
+          className="max-w-xl mb-8"
         >
           <span className="section-label">Projects</span>
           <h2 className="font-display font-bold text-3xl md:text-5xl mt-4 leading-tight text-star text-balance">

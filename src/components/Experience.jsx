@@ -4,14 +4,14 @@ import { fadeUp, viewportOnce, easeSmooth } from '../utils/motion'
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-28 md:py-36">
+    <section id="experience" className="relative py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="max-w-xl mb-16"
+          className="max-w-xl mb-8"
         >
           <span className="section-label">Experience</span>
           <h2 className="font-display font-bold text-3xl md:text-5xl mt-4 leading-tight text-star text-balance">
@@ -29,7 +29,7 @@ export default function Experience() {
             className="absolute left-[7px] md:left-[11px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-cyan via-rose/50 to-transparent"
           />
 
-          <div className="space-y-14">
+          <div className="space-y-8">
             {content.experience.map((job, i) => (
               <motion.div
                 key={job.role + job.company}
