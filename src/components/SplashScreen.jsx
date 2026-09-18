@@ -21,19 +21,19 @@ export function markSplashSeen() {
 }
 
 const BOOT_LINES = [
-  'Initializing interface systems…',
-  'Calibrating design systems…',
-  'Compiling pixel-perfect experiences…',
-  'Loading production-ready React skills…',
-  'Syncing with hiring frequency…',
-  'Almost ready to ship value.',
+  'Initializing the AI & ML portfolio…',
+  'Loading full-stack engineering skills…',
+  'Exploring data pipelines & model integration…',
+  'Connecting APIs, applications & automation…',
+  'Preparing NLP & AI project highlights…',
+  'Ready to explore my work.',
 ]
 
 const STATUS_TAGS = [
   'OPEN TO ROLES',
-  'FRONTEND ENGINEER',
-  'UI SYSTEMS',
-  'FAST · CLEAN · SHIPPED',
+  'FULL STACK AI DEVELOPER',
+  'MACHINE LEARNING',
+  'NLP · RAG · AUTOMATION',
 ]
 
 function seeded(n) {
@@ -147,14 +147,14 @@ export default function SplashScreen({ onComplete }) {
           <div className={`splash-content splash-content-in ${exiting ? 'splash-content-out' : ''}`}>
             <p className="splash-kicker">
               <span className="splash-pulse" />
-              PORTFOLIO BOOT SEQUENCE
+              AI & ML PORTFOLIO
             </p>
 
             <h1 className="splash-name">{content.name}</h1>
 
             <p className="splash-hook">
-              Hire the engineer who turns complex product goals into
-              <span className="splash-hook-accent"> interfaces people trust.</span>
+              Full Stack AI Developer turning data and machine learning into
+              <span className="splash-hook-accent"> practical applications, intelligent assistants, and automated workflows.</span>
             </p>
 
             <div className="splash-tags">
@@ -183,7 +183,7 @@ export default function SplashScreen({ onComplete }) {
               </div>
 
               <div className="splash-loader-foot">
-                <span>SYS // UI.ENGINE</span>
+                <span>SYS // AI.ML.ENGINE</span>
                 <span>READY FOR INTERVIEW</span>
               </div>
             </div>
