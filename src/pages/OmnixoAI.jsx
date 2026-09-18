@@ -190,7 +190,7 @@ export default function OmnixoAI() {
             <Link to="/" className="chat-brand">
               Omnixo <span className="text-cyan">AI</span>
             </Link>
-            <span className="chat-top-pill hidden sm:inline">GPT-4o Mini · OpenRouter</span>
+            <span className="chat-top-pill hidden sm:inline">GPT-4o Mini</span>
           </div>
           <div className="chat-topbar-right">
             <span
@@ -201,7 +201,7 @@ export default function OmnixoAI() {
                 !apiStatus.ok
                   ? 'API offline — run npm run dev'
                   : !apiStatus.hasKey
-                    ? 'Add OPENROUTER_API_KEY to .env'
+                    ? 'Chat service is not configured yet'
                     : 'Connected'
               }
             />
@@ -233,10 +233,6 @@ export default function OmnixoAI() {
                   <h1 className="chat-empty-title">
                     Omnixo <span className="text-cyan">AI</span>
                   </h1>
-                  <p className="chat-empty-copy">
-                    Chat with GPT-4o Mini, powered by OpenRouter.
-                    Ask questions, explore ideas, and get help with your work.
-                  </p>
                   <div className="chat-empty-hints">
                     {[
                       'Explain a React architecture like I’m hiring you',

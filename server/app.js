@@ -14,7 +14,7 @@ function requireKey(req, res) {
   if (!key) {
     res.status(503).json({
       error:
-        'OpenRouter API key is not configured. Add OPENROUTER_API_KEY to your .env file.',
+        'Chat is not configured yet. Please contact the site owner.',
       code: 'MISSING_API_KEY',
     })
     return null
@@ -70,7 +70,7 @@ app.post('/api/chat', async (req, res) => {
       try {
         parsed = JSON.parse(errBody)
       } catch {
-        parsed = { error: errBody || 'OpenRouter request failed' }
+        parsed = { error: errBody || 'AI service request failed' }
       }
       return res.status(response.status).json(parsed)
     }

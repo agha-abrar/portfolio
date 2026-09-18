@@ -5,7 +5,7 @@ export async function checkApiHealth() {
 }
 
 /**
- * Streams a chat completion from the local OpenRouter proxy.
+ * Streams a chat completion from the server.
  * onDelta(textChunk) is called for each token piece.
  */
 export async function streamChat({ model, messages, signal, onDelta }) {
@@ -23,12 +23,12 @@ export async function streamChat({ model, messages, signal, onDelta }) {
       message = data.error?.message || data.error || data.message || message
       if (data.code === 'MISSING_API_KEY') {
         message =
-          'OpenRouter key not set yet. Add OPENROUTER_API_KEY to your .env and restart the server.'
+          'Chat is not configured yet. Please contact the site owner.'
       }
     } catch {
       /* ignore */
     }
-    throw new Error(typeof message === 'string' ? message : 'Chat request failed')
+    throw new Error(typeof message === 'string' ? message.replace(/openrouter/gi, 'AI service') : 'Chat request failed')
   }
 
   if (!res.body) throw new Error('No response stream from server')
