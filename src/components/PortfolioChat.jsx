@@ -5,8 +5,7 @@ import content from '../data/content'
 
 const suggestions = ['What are his skills?', 'Tell me about his projects', 'How can I download his CV?']
 
-export default function PortfolioChat() {
-  const [open, setOpen] = useState(false)
+export default function PortfolioChat({ open, setOpen }) {
   const [input, setInput] = useState('')
   const [messages, setMessages] = useState([])
   const [busy, setBusy] = useState(false)
@@ -28,7 +27,7 @@ export default function PortfolioChat() {
     }
     document.addEventListener('keydown', onKeyDown)
     return () => document.removeEventListener('keydown', onKeyDown)
-  }, [open])
+  }, [open, setOpen])
   useEffect(() => {
     const log = logRef.current
     if (log) log.scrollTop = log.scrollHeight

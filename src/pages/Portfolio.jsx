@@ -14,6 +14,7 @@ import SplashScreen, { hasSeenSplash, markSplashSeen } from '../components/Splas
 export default function Portfolio() {
   const [showSplash] = useState(() => !hasSeenSplash())
   const [booting, setBooting] = useState(() => !hasSeenSplash())
+  const [chatOpen, setChatOpen] = useState(false)
 
   const handleSplashDone = useCallback(() => {
     markSplashSeen()
@@ -23,7 +24,7 @@ export default function Portfolio() {
   return (
     <div className="relative font-body text-mist min-h-screen">
       {showSplash && <SplashScreen onComplete={handleSplashDone} />}
-      <GalaxyBackground />
+      <GalaxyBackground showMotionToggle={!chatOpen} />
       <div className={`site-content ${booting ? 'site-content-hidden' : 'site-content-visible'}`}>
         <Nav />
         <main>
@@ -36,7 +37,7 @@ export default function Portfolio() {
         </main>
         <Footer />
 
-        {!booting && <PortfolioChat />}
+        {!booting && <PortfolioChat open={chatOpen} setOpen={setChatOpen} />}
       </div>
     </div>
   )

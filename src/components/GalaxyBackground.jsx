@@ -5,7 +5,7 @@ function seeded(n) {
   return x - Math.floor(x)
 }
 
-export default function GalaxyBackground() {
+export default function GalaxyBackground({ showMotionToggle = true }) {
   const [motionEnabled, setMotionEnabled] = useState(true)
   const [pageVisible, setPageVisible] = useState(() => !document.hidden)
 
@@ -43,14 +43,14 @@ export default function GalaxyBackground() {
 
   return (
     <>
-    <button
+    {showMotionToggle && <button
       type="button"
       className="action-pill galaxy-motion-toggle"
       aria-pressed={motionEnabled}
       onClick={() => setMotionEnabled((enabled) => !enabled)}
     >
       {motionEnabled ? '◉ Galaxy motion: On' : '○ Galaxy motion: Off'}
-    </button>
+    </button>}
     <div className="galaxy-bg" data-motion={motionEnabled && pageVisible ? 'on' : 'off'} aria-hidden>
       <div className="galaxy-void" />
       <div className="aurora" />
