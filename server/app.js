@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import { DEFAULT_MODEL_ID, DEFAULT_MODELS } from '../src/chat/models.js'
+import { portfolioMessages } from './portfolio-context.js'
 
 const app = express()
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions'
@@ -38,7 +39,7 @@ app.post('/api/chat', async (req, res) => {
   const key = requireKey(req, res)
   if (!key) return
 
-  const { model, messages, stream = true } = req.body || {}
+  const { model, messages, stream = true, mode } = req.body || {}
 
   if (!model || !Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({
@@ -46,10 +47,16 @@ app.post('/api/chat', async (req, res) => {
     })
   }
 
+  if (messages.some((message) => !message || typeof message.content !== 'string' ||
+      !['system', 'user', 'assistant'].includes(message.role))) {
+    return res.status(400).json({ error: 'Each message must have a valid role and text content.' })
+  }
+
   const payload = {
     model: DEFAULT_MODEL_ID,
-    messages,
+    messages: mode === 'portfolio' ? portfolioMessages(messages) : messages,
     stream,
+    ...(mode === 'portfolio' ? { max_tokens: 600 } : {}),
   }
 
   try {
@@ -96,6 +103,11 @@ app.post('/api/chat', async (req, res) => {
     const data = await response.json()
     res.json(data)
   } catch (err) {
+    if (res.headersSent) {
+      res.write(`data: ${JSON.stringify({ error: { message: 'The response was interrupted. Please try again.' } })}\n\n`)
+      res.end()
+      return
+    }
     res.status(502).json({ error: err.message || 'Chat proxy failed' })
   }
 })

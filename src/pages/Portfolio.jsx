@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import PortfolioChat from '../components/PortfolioChat'
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -36,10 +36,7 @@ export default function Portfolio() {
         </main>
         <Footer />
 
-        <Link to="/connect" className="connect-fab" aria-label="Open Omnixo AI chat">
-          <span className="connect-fab-dot" />
-          Omnixo AI
-        </Link>
+        {!booting && <PortfolioChat />}
       </div>
     </div>
   )

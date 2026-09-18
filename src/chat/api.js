@@ -8,11 +8,11 @@ export async function checkApiHealth() {
  * Streams a chat completion from the server.
  * onDelta(textChunk) is called for each token piece.
  */
-export async function streamChat({ model, messages, signal, onDelta }) {
+export async function streamChat({ model, messages, signal, onDelta, mode }) {
   const res = await fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model, messages, stream: true }),
+    body: JSON.stringify({ model, messages, stream: true, mode }),
     signal,
   })
 
@@ -51,18 +51,23 @@ export async function streamChat({ model, messages, signal, onDelta }) {
       if (!trimmed.startsWith('data:')) continue
       const data = trimmed.slice(5).trim()
       if (data === '[DONE]') continue
+      let json
       try {
-        const json = JSON.parse(data)
-        const piece = json.choices?.[0]?.delta?.content
-        if (piece) {
-          full += piece
-          onDelta?.(piece, full)
-        }
+        json = JSON.parse(data)
       } catch {
-        /* skip malformed chunks */
+        continue
+      }
+      if (json.error) {
+        throw new Error(String(json.error.message || 'The response was interrupted. Please try again.').replace(/openrouter/gi, 'AI service'))
+      }
+      const piece = json.choices?.[0]?.delta?.content
+      if (piece) {
+        full += piece
+        onDelta?.(piece, full)
       }
     }
   }
 
+  if (!full.trim()) throw new Error('No answer was received. Please try again.')
   return full
 }
