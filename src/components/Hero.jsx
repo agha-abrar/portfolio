@@ -124,11 +124,11 @@ export default function Hero() {
           transition={{ delay: 1.3, duration: 0.5 }}
           className="mt-12 flex flex-wrap gap-6 font-mono text-[10px] tracking-widest text-muted uppercase"
         >
-          <span>LAT {content.location.split(',')[0]?.slice(0, 8) || '—'}°</span>
+          <span>Machine Learning</span>
           <span className="text-cyan/70">|</span>
-          <span>FPS 60</span>
+          <span>Agentic AI</span>
           <span className="text-cyan/70">|</span>
-          <span>RENDER OK</span>
+          <span>RAG</span>
         </motion.div>
       </div>
 
