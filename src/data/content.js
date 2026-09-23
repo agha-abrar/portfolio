@@ -10,7 +10,7 @@ const content = {
     'From raw data to intelligent action — I build AI agents, RAG systems, and full-stack applications that turn complex ideas into useful products.',
   location: 'Sindh, Pakistan',
   email: 'abrarkhan9226@gmail.com',
-  cvPath: '/cv/Agha-Abrar-CV.pdf',
+  cvPath: '/cv/Agha-Resume.pdf',
   socials: [
     { label: 'GitHub', url: 'https://github.com/agha-abrar' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/agha-abrar/' },

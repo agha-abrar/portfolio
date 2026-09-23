@@ -100,7 +100,7 @@ export default function PortfolioChat({ open, setOpen }) {
                 <span>{message.role === 'user' ? 'You' : 'Portfolio assistant'}</span>
                 <p>{message.content || 'Thinking…'}</p>
                 {message.downloadCV && (
-                  <a className="action-pill portfolio-chat-download" href={content.cvPath} download="Agha-Abrar-CV.pdf">
+                  <a className="action-pill portfolio-chat-download" href={content.cvPath} download="Agha-Resume.pdf">
                     Download Resume ↓
                   </a>
                 )}
